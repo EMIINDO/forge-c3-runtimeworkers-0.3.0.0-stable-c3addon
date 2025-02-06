@@ -1,0 +1,162 @@
+﻿{
+	"Custom": {
+		"conditions":
+		[
+				
+		],
+		"actions":
+		[
+
+		],
+		"expressions":
+		[
+			{
+				"id": "getresult",
+				"expressionName": "getresult",
+				"returnType": "any"
+			},
+			{
+				"id": "getrandomvalues",
+				"expressionName": "getrandomvalues",
+				"returnType": "string",
+				"params":
+				[
+					{"id": "count", "type": "number", "initialValue": "\"\""}
+				]
+			},
+			{
+				"id": "encodeb64",
+				"expressionName": "encodeb64",
+				"returnType": "string",
+				"params":
+				[
+					{"id": "string", "type": "string", "initialValue": "\"\""}
+				]
+			},
+			{
+				"id": "decodeb64",
+				"expressionName": "decodeb64",
+				"returnType": "string",
+				"params":
+				[
+					{"id": "string", "type": "string", "initialValue": "\"\""}
+				]
+			}
+		]
+	},
+	"CIPHER: encrypt or decrypt":
+	{
+		"conditions":
+		[
+				
+		],
+		"actions":
+		[
+			{
+				"id": "setKey",
+				"scriptName": "setKey",
+				"highlight": false,
+				"params":
+				[
+					{"id": "key", "type": "string", "initialValue": "\"\""}
+				]
+			},
+			{
+				"id": "setIV",
+				"scriptName": "setIV",
+				"highlight": false,
+				"params":
+				[
+					{"id": "iv", "type": "string", "initialValue": "\"\""}
+				]
+			},
+			{
+				"id": "encrypt",
+				"scriptName": "encrypt",
+				"highlight": false,
+				"params":
+				[
+					{"id": "type", "type": "combo", "items": ["AES-ECB","AES-CBC","AES-CFB","AES-OFB","AES-GCM","3DES-ECB","3DES-CBC","DES-ECB","DES-CBC"], "initialValue": "AES-ECB"},
+					{"id": "text", "type": "string", "initialValue": "\"\""}
+				]
+			},
+			{
+				"id": "decrypt",
+				"scriptName": "decrypt",
+				"highlight": false,
+				"params":
+				[
+					{"id": "type", "type": "combo", "items": ["AES-ECB","AES-CBC","AES-CFB","AES-OFB","AES-GCM","3DES-ECB","3DES-CBC","DES-ECB","DES-CBC"], "initialValue": "AES-ECB"},
+					{"id": "text", "type": "string", "initialValue": "\"\""}
+				]
+			},
+			{
+				"id": "clKyAIV",
+				"scriptName": "clKyAIV",
+				"highlight": false
+			}
+		],
+		"expressions":
+		[
+
+		]
+	},
+	"HASH": {
+		"conditions":
+		[
+				
+		],
+		"actions":
+		[
+
+		],
+		"expressions":
+		[
+			{
+				"id": "getSHA1",
+				"expressionName": "getSHA1",
+				"returnType": "string",
+				"params":
+				[
+					{"id": "data", "type": "any", "initialValue": "\"\""}
+				]
+			},
+			{
+				"id": "getSHA256",
+				"expressionName": "getSHA256",
+				"returnType": "string",
+				"params":
+				[
+					{"id": "data", "type": "any", "initialValue": "\"\""}
+				]
+			},
+			{
+				"id": "getSHA384",
+				"expressionName": "getSHA384",
+				"returnType": "string",
+				"params":
+				[
+					{"id": "data", "type": "any", "initialValue": "\"\""}
+				]
+			},
+			{
+				"id": "getSHA512",
+				"expressionName": "getSHA512",
+				"returnType": "string",
+				"params":
+				[
+					{"id": "data", "type": "any", "initialValue": "\"\""}
+				]
+			},
+			{
+				"id": "MD5",
+				"expressionName": "MD5",
+				"returnType": "string",
+				"params":
+				[
+					{"id": "data", "type": "any", "initialValue": "\"\""}
+				]
+			}
+		]
+	}
+}

@@ -1,0 +1,196 @@
+﻿{
+	"languageTag": "en-US",
+	"fileDescription": "Forge Plugin.",
+	"text": {
+		"plugins": {
+			"massive_cube_forge": {
+				"name": "Forge",
+				"description": "Encrypt - Decrypt",
+				"help-url": "https://www.massive-cube.com/community",
+				"properties": {
+					
+				},
+				"aceCategories": {
+					"Custom": "Custom",
+					"CIPHER: encrypt or decrypt": "CIPHER: encrypt or decrypt",
+					"HASH": "HASH"
+				},
+				"conditions": {
+					
+				},
+				"actions": {
+					"setKey": {
+						"list-name":"Set Key",
+						"display-text":"Set Key to {0}",
+						"description":"Set Key",
+						"params": {
+							"key": {
+								"name": "Key", 
+								"desc": "Key length: 16 bytes will use AES-128, 24 => AES-192, 32 => AES-256"
+							}
+						}
+						
+					},
+					"clKyAIV": {
+						"list-name":"Clear key and iv",
+						"display-text":"Clear key and iv",
+						"description":"Clear key and iv"
+					},
+					"setIV": {
+						"list-name":"Set iv",
+						"display-text":"Set iv to {0}",
+						"description":"Set iv",
+						"params": {
+							"iv": {
+								"name": "iv", 
+								"desc": "iv"
+							}
+						}
+						
+					},
+					"encrypt": {
+						"list-name":"Encrypt",
+						"display-text":"Encrypt string {1} with algorithm {0}",
+						"description":"Encrypt String",
+						"params": {
+							"type": {
+								"name": "Type of Cipher", 
+								"desc": "Set the type of chiper",
+								"items": {
+									"AES-ECB": "AES-ECB",
+									"AES-CBC": "AES-CBC",
+									"AES-CFB": "AES-CFB",
+									"AES-OFB": "AES-OFB",
+									"AES-GCM": "AES-GCM",
+									"3DES-ECB": "3DES-ECB",
+									"3DES-CBC": "3DES-CBC",
+									"DES-ECB": "DES-ECB",
+									"DES-CBC": "DES-CBC"
+								}
+							},
+							"text": {
+								"name": "String", 
+								"desc": "String"
+							}
+						}
+						
+					},
+					"decrypt": {
+						"list-name":"Decrypt",
+						"display-text":"Decrypt string {1} with algorithm {0}",
+						"description":"Decrypt Base64-String",
+						"params": {
+							"type": {
+								"name": "Type of Cipher", 
+								"desc": "Set the type of chiper",
+								"items": {
+									"AES-ECB": "AES-ECB",
+									"AES-CBC": "AES-CBC",
+									"AES-CFB": "AES-CFB",
+									"AES-OFB": "AES-OFB",
+									"AES-GCM": "AES-GCM",
+									"3DES-ECB": "3DES-ECB",
+									"3DES-CBC": "3DES-CBC",
+									"DES-ECB": "DES-ECB",
+									"DES-CBC": "DES-CBC"
+								}
+							},
+							"text": {
+								"name": "String", 
+								"desc": "String"
+							}
+						}
+						
+					}
+				},
+				"expressions": {
+					"getresult": {
+						"description":"Get result-data",
+						"translated-name":"Get result-data"
+					},
+					"getrandomvalues": {
+						"description":"Generate pseudo-random number. (PRNG) And get the number as Hex",
+						"translated-name":"Get pseudo-random data",
+						"params": {
+							"count": {
+								"name": "Number of digits", 
+								"desc": "Number of digits"
+							}
+						}
+					},
+					"encodeb64": {
+						"description":"Encode string to Base64-String",
+						"translated-name":"Encode to Base64",
+						"params": {
+							"string": {
+								"name": "string", 
+								"desc": "String"
+							}
+						}
+					},
+					"decodeb64": {
+						"description":"Decode Base64-String to string",
+						"translated-name":"Decode Base64",
+						"params": {
+							"string": {
+								"name": "string", 
+								"desc": "String"
+							}
+						}
+					},
+					"getSHA1": {
+						"description":"Get data as SHA1-Hash(Hex)",
+						"translated-name":"Get data as SHA1-Hash(Hex)",
+						"params": {
+							"data": {
+								"name": "data", 
+								"desc": "Data"
+							}
+						}
+					},
+					"getSHA256": {
+						"description":"Get data as SHA256-Hash(Hex)",
+						"translated-name":"Get data as SHA256-Hash(Hex)",
+						"params": {
+							"data": {
+								"name": "data", 
+								"desc": "Data"
+							}
+						}
+					},
+					"getSHA384": {
+						"description":"Get data as SHA384-Hash(Hex)",
+						"translated-name":"Get data as SHA384-Hash(Hex)",
+						"params": {
+							"data": {
+								"name": "data", 
+								"desc": "Data"
+							}
+						}
+					},
+					"getSHA512": {
+						"description":"Get data as SHA512-Hash(Hex)",
+						"translated-name":"Get data as SHA512-Hash(Hex)",
+						"params": {
+							"data": {
+								"name": "data", 
+								"desc": "Data"
+							}
+						}
+					},
+					"MD5": {
+						"description":"Get data as MD5-Hash(Hex)",
+						"translated-name":"Get data as MD5-Hash(Hex)",
+						"params": {
+							"data": {
+								"name": "data", 
+								"desc": "Data"
+							}
+						}
+					}
+
+				}
+			}
+		}
+	}
+}
